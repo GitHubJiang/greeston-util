@@ -82,4 +82,52 @@ public final class StringUtil {
         return StringUtils.contains(seq, searchSeq);
     }
     
+    public static String subString(){
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(StringUtils.substringBeforeLast("1111-222-33", "-"));;
+        System.out.println(StringUtils.substringAfterLast("1111-222-33", "-"));;
+        System.out.println();
+    }
+    /**
+     * <pre>
+     * StringUtils.substringBeforeLast(null, *)      = null
+     * StringUtils.substringBeforeLast("", *)        = ""
+     * StringUtils.substringBeforeLast("abcba", "b") = "abc"
+     * StringUtils.substringBeforeLast("abc", "c")   = "ab"
+     * StringUtils.substringBeforeLast("a", "a")     = ""
+     * StringUtils.substringBeforeLast("a", "z")     = "a"
+     * StringUtils.substringBeforeLast("a", null)    = "a"
+     * StringUtils.substringBeforeLast("a", "")      = "a"
+     * </pre>
+     * @author Lay
+     * @param str
+     * @param separator
+     */
+    public static String substringBeforeLast(final String str, final String separator){
+        return StringUtils.substringBeforeLast(str, separator);
+    }
+    /**
+     * <pre>
+     * StringUtils.substringAfterLast(null, *)      = null
+     * StringUtils.substringAfterLast("", *)        = ""
+     * StringUtils.substringAfterLast(*, "")        = ""
+     * StringUtils.substringAfterLast(*, null)      = ""
+     * StringUtils.substringAfterLast("abc", "a")   = "bc"
+     * StringUtils.substringAfterLast("abcba", "b") = "a"
+     * StringUtils.substringAfterLast("abc", "c")   = ""
+     * StringUtils.substringAfterLast("a", "a")     = ""
+     * StringUtils.substringAfterLast("a", "z")     = ""
+     * </pre>
+     * @author Lay
+     * @param str
+     * @param separator
+     * @return
+     * @since
+     */
+    public static String substringAfterLast(final String str, final String separator){
+        return StringUtils.substringAfterLast(str, separator);
+    }
 }
